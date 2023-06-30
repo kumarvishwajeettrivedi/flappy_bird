@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: aquamarine;
+}
+.content{
+    height: 500px;
+    width: 400px;
+    border: 1px solid red;
+    position: relative;
+    left: 400px;
+    top: 200px;
+    overflow: hidden;
+    background-color: aqua;
+
+}
+.pillar{
+    height: 500px;
+    width: 50px;
+    background-color: black;
+    position: relative;
+    left: 400px;
+   animation: pillar 3s  1s ease infinite;
+  
+}
+.hole{
+    height: 130px;
+    width: 50px;
+    position: relative;
+    background-color:aqua;
+    top:-200px;
+    animation: pillar 3s 1s infinite;
+}
+
+@keyframes pillar{
+    0%{
+        left:400px;
+    }
+    100%{
+        left:-50px;
+    }
+}
+.character{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: red;
+    top: 100px;
+}
