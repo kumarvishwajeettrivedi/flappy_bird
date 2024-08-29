@@ -66,3 +66,15 @@ canvas {
 #linkedinBtn {
     left: 280px;
 }
+
+
+@media (max-width: 600px) {
+    .game-container {
+        width: 100%;
+        height: auto;
+    }
+
+    canvas {
+        width: 100%;
+    }
+}
