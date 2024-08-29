@@ -1,53 +1,77 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background-color: #87CEEB;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-body{
-    background-color: aquamarine;
+
+.game-container {
+    text-align: center;
 }
-.content{
+
+header {
+    margin-bottom: 20px;
+}
+
+.score {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.content {
     height: 500px;
-    width: 400px;
-    border: 1px solid red;
+    width: 300px;
+    border: 2px solid #333;
     position: relative;
-    left: 400px;
-    top: 200px;
     overflow: hidden;
-    background-color: aqua;
-
+    background-color: #70C5CE;
 }
-.pillar{
+
+.pillar {
     height: 500px;
     width: 50px;
-    background-color: black;
-    position: relative;
-    left: 400px;
-   animation: pillar 3s  1s ease infinite;
-  
+    background-color: #228B22;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: pillar 3s linear infinite;
 }
-.hole{
+
+.hole {
     height: 130px;
     width: 50px;
-    position: relative;
-    background-color:aqua;
-    top:-200px;
-    animation: pillar 3s 1s infinite;
+    position: absolute;
+    background-color: #70C5CE;
+    top: -200px;
+    animation: pillar 3s linear infinite;
 }
 
-@keyframes pillar{
-    0%{
-        left:400px;
+@keyframes pillar {
+    0% {
+        right: -50px;
     }
-    100%{
-        left:-50px;
+    100% {
+        right: 100%;
     }
 }
-.character{
-    height: 50px;
-    width: 50px;
+
+.character {
+    height: 40px;
+    width: 40px;
     position: absolute;
     border-radius: 50%;
-    background-color: red;
+    background-color: yellow;
     top: 100px;
+    left: 50px;
+    background-image: url('bird.png'); /* You can add a bird image here */
+    background-size: cover;
 }
+
