@@ -1,6 +1,6 @@
 # Flappy Bird Game
 
-![Flappy Bird Game](demo.jpg)
+![Flappy Bird Game](demo.png)
 
 ## Overview
 
