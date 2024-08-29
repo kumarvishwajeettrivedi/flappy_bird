@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play the classic Flappy Bird game. Compete for high scores and enjoy a fun game experience.">
+    <meta name="keywords" content="Flappy Bird, Game, Play, High Score">
     <title>Flappy Bird Game</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX",
+          enable_page_level_ads: true
+        });
+    </script>
 </head>
 <body>
     <div class="game-container">
-        <header>
-            <h1>Flappy Bird</h1>
-            <div class="score">Score: <span id="score">0</span></div>
-        </header>
-        <div class="content">
-            <div class="pillar"></div>
-            <div class="hole"></div>
-            <div class="character"></div>
+        <canvas id="gameCanvas" width="500" height="650"></canvas>
+        <div class="score-board">
+            <p>Score: <span id="score">0</span></p>
+            <p>High Score: <span id="highScore">0</span></p>
         </div>
+        <button id="restartBtn" onclick="restartGame()">Restart</button>
     </div>
+
+    
+    <div class="button-container">
+        <button id="portfolioBtn" onclick="window.open('https://your-portfolio-url.com', '_blank')">Portfolio</button>
+        <button id="githubBtn" onclick="window.open('https://github.com/kumarvishwajeettrivedi/flappy_bird', '_blank')">GitHub</button>
+        <button id="linkedinBtn" onclick="window.open('https://www.linkedin.com/in/vishwajeet-kumar-5b7530242', '_blank')">LinkedIn</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
