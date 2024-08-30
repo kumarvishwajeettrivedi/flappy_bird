@@ -18,8 +18,31 @@ let highScore = localStorage.getItem('highScore') || 0;
 
 document.getElementById('highScore').innerText = highScore;
 
+
+document.addEventListener('keydown', (e) => {
+    if (e.code === 'Space') {
+        bird.jump();
+    }
+});
+
+
+canvas.addEventListener('touchstart', () => {
+    bird.jump();
+});
+
+
+
+
+
+
+
+
+
 let birdImg = new Image();
 birdImg.src = 'chuck.png'; 
+
+
+
 
 let bird = {
     x: CANVAS_WIDTH / 2 - BIRD_WIDTH / 2,
