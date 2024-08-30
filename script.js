@@ -113,7 +113,7 @@ function drawPipes() {
         ctx.restore(); 
 
         // Draw the bottom pipe
-        ctx.drawImage(pipeImg, pipe.x, pipe.height + pipe.gap, PIPE_WIDTH, CANVAS_HEIGHT - pipe.height - pipe.gap);
+        ctx.drawImage(pipeImg, pipe.x, pipe.height + pipe.gap+10, PIPE_WIDTH, CANVAS_HEIGHT - pipe.height - pipe.gap+10);
     });
 }
 
