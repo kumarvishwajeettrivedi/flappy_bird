@@ -8,7 +8,7 @@ const BIRD_HEIGHT = 50;
 const PIPE_WIDTH = 100;
 const MIN_PIPE_HEIGHT = 100;
 const MAX_PIPE_HEIGHT = 300;
-const PIPE_GAP = 170;
+const PIPE_GAP = 220;
 const GRAVITY = 0.5;
 const LIFT = -8;
 const PIPE_SPEED = 2;
@@ -18,31 +18,18 @@ let highScore = localStorage.getItem('highScore') || 0;
 
 document.getElementById('highScore').innerText = highScore;
 
-
 document.addEventListener('keydown', (e) => {
     if (e.code === 'Space') {
         bird.jump();
     }
 });
 
-
 canvas.addEventListener('touchstart', () => {
     bird.jump();
 });
 
-
-
-
-
-
-
-
-
 let birdImg = new Image();
-birdImg.src = 'chuck.png'; 
-
-
-
+birdImg.src = 'chuck.png';
 
 let bird = {
     x: CANVAS_WIDTH / 2 - BIRD_WIDTH / 2,
@@ -101,33 +88,25 @@ function updatePipes() {
 }
 
 let pipeImg = new Image();
-pipeImg.src = 'tree.png'; 
+pipeImg.src = 'tree.png';
 
 function drawPipes() {
     pipes.forEach(pipe => {
-        // Draw the top pipe (flipped)
-        ctx.save(); 
-        ctx.translate(pipe.x + PIPE_WIDTH, pipe.height); 
-        ctx.scale(-1, -1); 
+        ctx.save();
+        ctx.translate(pipe.x + PIPE_WIDTH, pipe.height);
+        ctx.scale(-1, -1);
         ctx.drawImage(pipeImg, 0, 0, PIPE_WIDTH, pipe.height);
-        ctx.restore(); 
-
-        // Draw the white background where the gap starts
-        ctx.fillStyle = 'white'; // Background color
-        ctx.fillRect(pipe.x, pipe.height, PIPE_WIDTH, pipe.gap + 10); // Rectangle covering the gap area
-
-        // Draw the bottom pipe
+        ctx.restore();
         ctx.drawImage(pipeImg, pipe.x, pipe.height + pipe.gap + 10, PIPE_WIDTH, CANVAS_HEIGHT - pipe.height - pipe.gap - 10);
     });
 }
-
 
 function checkCollision() {
     for (let i = 0; i < pipes.length; i++) {
         let pipe = pipes[i];
         if (bird.x < pipe.x + PIPE_WIDTH &&
             bird.x + bird.width > pipe.x &&
-            (bird.y < pipe.height || bird.y + bird.height > pipe.height + pipe.gap)) {
+            (bird.y < pipe.height - 5 || bird.y + bird.height > pipe.height + pipe.gap + 5)) {
             return true;
         }
     }
