@@ -113,9 +113,14 @@ function drawPipes() {
         ctx.restore(); 
 
         // Draw the bottom pipe
-        ctx.drawImage(pipeImg, pipe.x, pipe.height + pipe.gap+10, PIPE_WIDTH, CANVAS_HEIGHT - pipe.height - pipe.gap+10);
+        ctx.drawImage(pipeImg, pipe.x, pipe.height + pipe.gap + 10, PIPE_WIDTH, CANVAS_HEIGHT - pipe.height - pipe.gap - 10);
+
+        // Draw a mark where the gap starts
+        ctx.fillStyle = 'red'; // Color of the mark
+        ctx.fillRect(pipe.x + PIPE_WIDTH / 2 - 5, pipe.height + 10, 10, 10); // Small rectangle to mark the gap
     });
 }
+
 
 function checkCollision() {
     for (let i = 0; i < pipes.length; i++) {
