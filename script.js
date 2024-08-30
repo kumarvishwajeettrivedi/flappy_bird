@@ -112,12 +112,12 @@ function drawPipes() {
         ctx.drawImage(pipeImg, 0, 0, PIPE_WIDTH, pipe.height);
         ctx.restore(); 
 
+        // Draw the white background where the gap starts
+        ctx.fillStyle = 'white'; // Background color
+        ctx.fillRect(pipe.x, pipe.height, PIPE_WIDTH, pipe.gap + 10); // Rectangle covering the gap area
+
         // Draw the bottom pipe
         ctx.drawImage(pipeImg, pipe.x, pipe.height + pipe.gap + 10, PIPE_WIDTH, CANVAS_HEIGHT - pipe.height - pipe.gap - 10);
-
-        // Draw a mark where the gap starts
-        ctx.fillStyle = 'red'; // Color of the mark
-        ctx.fillRect(pipe.x + PIPE_WIDTH / 2 - 5, pipe.height + 10, 10, 10); // Small rectangle to mark the gap
     });
 }
 
