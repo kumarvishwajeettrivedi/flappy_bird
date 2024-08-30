@@ -41,11 +41,11 @@ canvas {
 
 .button-container {
     position: relative;
-    top: 20px;
+    top: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 #portfolioBtn, #githubBtn, #linkedinBtn {
