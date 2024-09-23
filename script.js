@@ -6,11 +6,11 @@ const CANVAS_HEIGHT = canvas.height;
 const BIRD_WIDTH = 70;
 const BIRD_HEIGHT = 50;
 const PIPE_WIDTH = 100;
-const MIN_PIPE_HEIGHT = 100;
-const MAX_PIPE_HEIGHT = 300;
+const MIN_PIPE_HEIGHT = 120;
+const MAX_PIPE_HEIGHT = 320;
 const PIPE_GAP = 220;
 const GRAVITY = 0.5;
-const LIFT = -8;
+const LIFT = -7;
 const PIPE_SPEED = 2;
 
 let score = 0;
